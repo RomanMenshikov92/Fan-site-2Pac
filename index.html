@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html lang="ru">
 
     <head>
@@ -12,47 +12,104 @@
 
     <body>
         <header class="top-site">
-            <!--<h1 class="nametop"></h1>-->
+            <div class="logo">
+                <img src="img/logo(new.jpg" alt="logo 2Pac">
+            </div>
             <nav class="navigation">
                 <ul class="menu">
-                    <li class="menu-list">
-                        <img class="logo" src="img/logo(new.jpg" alt="logo 2Pac">
-                    </li>
                     <li class="menu-list">
                         <a class="menu-link" href="#homepage">Home</a>
                     </li>
                     <li class="menu-list">
-                        <a class="menu-link" href="source/biography.html">Biography11111111111</a>
+                        <a class="menu-link">Biography</a>
+                        <ul class="sub-menu">
+                            <li class="menu-list">
+                                <a class="sub-menu-link" href="source/Biography/General Biography.html">General Biography</a>
+                            </li>
+                            <li class="menu-list">
+                                <a class="sub-menu-link" href="source/Biography/Childhood and Youth.html">Childhood and Youth</a>
+                            </li>
+                            <li class="menu-list">
+                                <a class="sub-menu-link" href="source/Biography/Personal Life.html.html">Personal Life</a>
+                            </li>
+                            <li class="menu-list">
+                                <a class="sub-menu-link" href="source/Biography/Career.html">Career</a>
+                            </li>
+                            <li class="menu-list">
+                                 <a class="sub-menu-link" href="source/Biography/Death.html">Death</a>
+                            </li>
+                            <li class="menu-list">
+                                 <a class="sub-menu-link" href="source/Biography/Heritage.html">Heritage</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu-list">
                         <a class="menu-link" href="source/discography.html">Discography</a>
-                    </li>
+                        <ul class="sub-menu">
+                            <li class="menu-list">Studio Albums</li>
+                            <li class="menu-list">Posthumous Albums</li>
+                            <li class="menu-list">Mixtapes</li>
+                            <li class="menu-list">Soundtracks</li>
+                        </ul>
                     <li class="menu-list">
                         <a class="menu-link" href="source/videography.html">Videography</a>
+                        <ul class="sub-menu">
+                            <li class="menu-list">Clips</li>
+                            <li class="menu-list">Concerts</li>
+                            <li class="menu-list">Video Interviews</li>
+                        </ul>
                     </li>
                     <li class="menu-list">
-                        <a class="menu-link" href="source/lyrics.html">Song Lyrics</a>
+                        <a class="menu-link" href="source/videography.html">Filmography</a>
+                        <ul class="sub-menu">
+                            <li class="menu-list">Films</li>
+                            <li class="menu-list">Documentaries</li>
+                        </ul>
                     </li>
                     <li class="menu-list">
-                        <a class="menu-link" href="source/translation.html">Song Translation</a>
+                        <a class="menu-link" href="source/lyrics.html">Lyrics</a>
+                        <ul class="sub-menu">
+                            <li class="menu-list">Song Lyrics</li>
+                            <li class="menu-list">Song Translations</li>
+                            <li class="menu-list">Quotes</li>
+                            <li class="menu-list">Interviews</li>
+                            <li class="menu-list">Album Reviews</li>
+                        </ul> 
+                    </li>
+                    <li class="menu-list">
+                        <a class="menu-link" href="source/translation.html">Life Stories</a>
+                        <ul class="sub-menu">
+                            <li class="menu-list">Makaveli or 2Pac?</li>
+                            <li class="menu-list">Facts</li>
+                            <li class="menu-list">Tatoo</li>
+                            <li class="menu-list">The War of the Coasts</li>
+                            <li class="menu-list">Groups and their Ideology</li>
+                            <li class="menu-list">Parents and Relatives</li>
+                            <li class="menu-list">Friends & Enemies</li>
+                            <li class="menu-list">Courts and Prison</li>
+                            <li class="menu-list">Death Row Records</li>
+                            <li class="menu-list">Monuments</li>
+                        </ul>
                     </li>
                     <li class="menu-list">
                         <a class="menu-link" href="source/books.html">Books</a>
                     </li>
                 </ul>
             </nav>
-            <img src="img/TUPAC AMARU SHAKUR(top).png">
-            <form class="block-search">
-                <label class="search" for="id-search">
-                    <input type="text" name="search" id="id-search" placeholder="Search">
-                    <button type="submit"></button>
-            </form>
-        </header>
-
-        <main>
-            <div>
-
+            <div class="top-img">
+                <img src="img/TUPAC AMARU SHAKUR.png" alt="First Name">
             </div>
+            <div class="search">
+                <form class="form-search" action="" method="GET">
+                    <label for="id-search">
+                    <input class="input-search" type="search" name="search" id="id-search" placeholder="Search">
+                    <label for="id-image">
+                    <input class="input-button" type="image" name="image" id="id-image" src="img/icon_search.png" width=auto height=auto>
+                </form>
+            </div>
+
+        </header>
+        <main>
 
             <div id="homepage">
                 <img src="img/background_night_theme.jpg" width="100%" height="auto" alt="Фоновая картика">
@@ -69,8 +126,8 @@
         </main>
     </body>
 
-    <footer class="footer">
-        <b> &COPY; 2021 </b>
+    <footer class="footer-site">
+        <b> &COPY; 2021 - Fan-site</b>
     </footer>
 
     </html>

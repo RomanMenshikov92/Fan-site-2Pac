@@ -1,137 +1,139 @@
-* {box-sizing: border-box;}
 
 body {    
-font-size: 16px;
-font-family: Times New Roman, sans-serif;
+font-size: 14px;
+font-family: cursive, sans-serif;
 line-height: 25px;
 padding: 0;
-margin: 0;  }
+margin: 0; 
+}
 
 .top-site {
 height: 65px;
 background: #453f3f;
 display: flex;
+flex-wrap: wrap;
 flex-direction: row;
 justify-content: start;
+border-bottom: 3px solid black;
 }
 
-.block-search {
-position: static;
-/*width: 300px;
-margin: 5px;
-height: 40px;*/
-}
-
-.block-search input {
-height: 60px;
-width: 0;
-padding: 0 40px 0 15px;
-border: none;
-border-bottom: 5px solid transparent;
-outline: none;
-background: transparent;
-transition: .3s cubic-bezier(0, 0.8, 0, 1);
-position: absolute;
-top: 0;
-right: 0;
-z-index: 2;
-}
-.block-search input:focus {
-width: 300px;
-z-index: 1;
-border-bottom: 2px solid white;
-}
-
-.block-search button {
-background-color:yellow;
-border: none;
-height: 55px;
-width: 55px;
-position: absolute;
-top: 0;
-right: 0;
-cursor: text;
-padding:10px 10px;
-margin: 5px 5px;
-background-image: url(img/icon_search.png);
-background-repeat: no-repeat;
-background-position: center center;
-}
-/*.block-search button:before {
-content: "\f002";
-font-family: FontAwesome;
-font-size: 16px;
-color:teal;
-}*/
-
-/* .nametop {
-color:white;
-font-size: 30px;
-margin-right: 425px;
-font-size: 70px;
-margin-top: 20px;
-}*/
-
-/*.topsite img {
-color: white;
-width: 100px;
-}*/
-
-/*.navigation {
-display: flex;
-justify-content: center;
-}*/
-
-.menu {
+.navigation .menu {
 display: flex;
 justify-content: start;
 margin: 0;
 padding: 0;
 list-style-type: none;
 text-decoration: none;
-font-size: 22px;
-/*background-color:#3d3434;*/
+font-size: 18px;
 color:black;
-/*border-bottom: 3px solid dimgray;*/
-font-family: 'Times New Roman', Times, serif;
+border-bottom: 3px solid dimgray;
+font-family: cursive, sans-serif;
 height: 50px;
 }
 
-.menu-list {
-display: flex;
-justify-content: start;
-margin: 0;
-padding: 0;
+.navigation .menu > .menu-list {
+    position: relative;
 }
 
-.logo {
-width: 70px;
-height: 50px;
-border-radius: 30%;
+
+.logo img {
+margin: 8px 10px;
+border-radius: 35%;
 /*background-image: url(img/logo_2Pac.jpg);*/
 }
 
 .menu-link {
 color:white;
 font-weight: 700px;
-display: flex;
-justify-content: start;
-padding:10px 15px;
+display: block;
+padding: 15px 5px;
 margin: 5px 5px;
 text-decoration:none;
+max-width: 110px;
 }
-
+ 
 .menu-link:hover {
 background-color:dimgray;
 border-radius: 20px 5px;
+border: 1px solid black;
+color: black;
+transition: .5s ease-in-out;
+}
+
+.menu .sub-menu {
+display: none;
+position absolute;
+margin: 0;
+padding:0;
+width: auto;
+background-color: dimgray;
+list-style: none;
+}
+.menu .sub-menu .menu-link {
+border: 3px solid black;
+}
+.menu > .menu-list:hover .sub-menu {
+display: block;
+}
+.menu > .menu-list {
+    width: auto;
+    margin:0;
+    padding:0;
+}
+.sub-menu-link {
+color:white;
+font-weight: 700px;
+display: block;
+padding: 5px 5px;
+margin: 5px 5px;
+text-decoration:none;
+border: 2px solid black;
+}
+.sub-menu-link:hover {
+background-color:dimgray;
+border-radius: 20px;
+border: 1px solid black;
+color: black;
+transition: .5s ease-in-out;
+border: 2px solid white;
+}
+
+.top-img img {
+height: 65px;
+margin-left: 40px;
+}
+
+.input-search {
+margin: 5px;
+height: 55px;
+width: 100px;
+margin-right:0;
+padding: 5px 0 5px 5px;
+border: 0 none;
+background-color: #453f3f;
+color: black;
+float: left;
+font-size: 20px;
+box-sizing: border-box;
+transition: all 0.15s;
+margin-left: 45px;
+
+}
+.input-search:focus {
+background: dimgray;
+}
+.input-button {
+margin: 5px;
+border: 0 none;
+
 }
 
 #homepage {
 margin: 0;
 padding: 0;
-position: relative;
 text-align: center;
-color:black;    }
+color:black;
+}
 
 .page1 {
 font-size: 50px;
@@ -147,7 +149,7 @@ line-height: 30px;
 position: relative;
 font-family: 'Times New Roman', Times, serif; 
 left: 70px;
-top:90px;
+top: 90px;
 border:2px solid dimgray;
 box-shadow: 15px 15px 0 0 dimgray;
 padding: 15px 25px;
@@ -162,7 +164,7 @@ text-align: right;
 padding-top: 20px;
 }
 
-.footer {
+.footer-site {
 height: 30px;
 background-color:black;
 color:white;   
