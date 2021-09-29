@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+  box-sizing: border-box;
   }
 /****************Главное тело*******************/
 body {    
@@ -20,20 +21,22 @@ background-position: center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
-min-height: 100%;
 }
 /*******************Топ=хедер*******************/
-.top-site {
-height: 65px;
+.header-site {
+height: 8vh;
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: start;
+display: 1 1 auto;
 position: fixed; /***************ПРижатие к верх вне зависимости от скролла****************/
 top:0;
 width: 100%;
+background-color: rgba(112, 98, 98, 0.3);
 }
 /********************Меню(хедер)*****************************/
 .navigation .menu {
@@ -145,7 +148,7 @@ float: left;
 font-size: 20px;
 box-sizing: border-box;
 transition: all 0.15s;
-margin-left: 140px;
+margin-left: 120px;
 }
 /******************Поиск (хэдер)***************************/
 .input-search:focus {
@@ -157,85 +160,108 @@ margin: 5px;
 border: 0 none;
 }
 /******************Общая страница***************************/
-main {
+.section-homepage {
 flex: 1 0 auto;
+display: flex;
+flex-direction: column;
+padding:0;
+margin: 0;
+height: 87vh;
 }
  /******************Главная страница***************************/
 #homepage {
 margin: 0;
 padding: 0;
-text-align: center;
 }
  /******************Главная страница***************************/
-.page1 {
+.name-quote {
 font-size: 35px;
+font-weight: 500;
+color: white;
+}
+.heading-2Pac {
+font-size: 55px;
 font-weight: 700;
-position: absolute;
-left: 70px;
-top:700px;
-color: white;
+position: fixed;
+left: 200px;
+top: 650px;
 }
  /******************Главная страница***************************/
-.page1 p {
-font-size: 25px;
+.quote-2Pac {
 line-height: 30px;
-position: relative;
-font-family: 'Times New Roman', Times, serif; 
-left: 150px;
-top: 50px;
-border:0px solid dimgray;
-padding: 15px 25px;
-color:white; 
+position: fixed;
+left: 200px;
+top: 800px;
 }
  /******************Главная страница***************************/
-.page1 .tupac { 
-color: white;
-font-family: 'Times New Roman', Times, serif; 
-font-size: 20px;
+.name-2Pac { 
+font-size: 30px;
 display: block;
 text-align: right;
 padding-top: 10px;
 }
 
-
  /******************Главная страница***************************/
 /* VIDEO */
-
 .video {
   left: 400px;
-  top: 390px;
+  top: 400px;
   position: fixed;
   z-index: auto;
   width: 500px;
   height: 500px;
   transform: translate(-50%, -50%);
 }
-/*
-.buttonFullscreen {
-  position: absolute;
-  bottom:0;
-  left:0;
-  z-index:10;
-}
  /******************Главная страница***************************/
 .controls {
   display: flex;
-  width: 60px;
-  height: 60px;
+  flex-direction: column;
   position: fixed;
-  left: 100px;
-  top: 500px;
-  border-radius: 30%;
+  left: 75px;
+  top: 300px;
 }
+.btn {
+  background: transparent;
+  border: hidden;
+  outline: hidden;
+  padding: 10px 0;
+  color:white;
+}
+/**********************Новостной контент***********************/
+/*.news-link {
+color:white;
+text-decoration:none;
+font-weight: 700px;
+font-size: 65px;
+position: fixed;
+left: 1600px;
+top: 800px;
+}
+.section-news-feed {
+  background: rgba(112, 98, 98, 0.3);
+  width: 1600px;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.heading-news {
+  background-color: darkblue;
+  width: 100px;
+  text-align: center;
+} */
  /******************Боттом-футер***************************/
 .footer-site {
-height: 30px;
+height: 5vh;
 background-color:gray;
 color:white;   
 text-align: center;
-font-size: 20px; 
+font-size: 20px;
+width: 100%; 
+display: flex;
+justify-content: center;
 flex: 0 0 auto;
-}
+} 
+
 
 
 

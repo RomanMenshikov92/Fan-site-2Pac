@@ -3,24 +3,37 @@ let video = document.querySelector('.video');
 
 ///Воспроизведение и стоп///
 let playAndStop = document.querySelector('.buttonPlayAndStop');
-playAndStop.addEventListener("click", function() {
-    if(video.paused || video.ended) {
+let imgChange1 = document.querySelector('.changeImg1');
+playAndStop.addEventListener('click', function() {
+    if(video.paused) {
       video.play();
-      playAndStop.img.src = "/icon/play.png";
+      ///imgChange1.src = "icon/play.png";
     } else {
       video.pause();
-      playAndStop.img.src = "/icon/stop.png";
+      ///imgChange1.src = "icon/stop.png";
     }
     }, false);
 ///Звук выключен и включен///
 let sound = document.querySelector('.buttonSound');
+let imgChange2 = document.querySelector('.changeImg2');
 sound.addEventListener("click", function() {
   if (video.muted) {
     video.muted = false;
-    sound.value = "Mute";
+    imgChange2.src = "icon/icon_sound_enabled.png";
   } else {
     video.muted = true;
-    sound.value = "Unmute";
+    imgChange2.src = "icon/icon_sound_disabled.png";
+  }
+  },false);
+///Включение и выключение субтитров///
+let sub = document.querySelector('.buttonSub');
+sub.addEventListener("click", function() {
+  if (video.subtitle) {
+    video.subtitle = false;
+    sub.value = 'disabled';
+  } else {
+    video.subtitle = true;
+    sub.value = 'enabled';
   }
   }, false);
 ///Полный экран и выход из него///
@@ -34,15 +47,5 @@ fullscreen.addEventListener("click", function() {
     video.requestFullscreen();
    }
   }, false);
-  
-///Включение и выключение субтитров///
-let sub = document.querySelector('.buttonSub');
-sub.addEventListener("click", function() {
-  if (video.subtitle) {
-    video.subtitle = false;
-    sub.value = 'disabled';
-  } else {
-    video.subtitle = true;
-    sub.value = 'enabled';
-  }
-  }, false);
+
+
