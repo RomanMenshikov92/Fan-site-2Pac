@@ -17,7 +17,7 @@
 <!--BODY-->
 <body>
 <!--HEADER-->
-<header class="header-site">
+<header id="myHeader" class="header-site">
     <div class="logo">
         <img src="img/logo(new.jpg" alt="logo 2Pac">
     </div>
@@ -117,31 +117,37 @@
 <!--MAIN-->
 <main>
 <!--SECTION-HOME-->
-<section class="section-homepage">
-    <div id="homepage">
-        <div class="videoContent">
-            <video class="video" loop="" autoplay="" muted="" preload="auto">
-                <source src="video/2Pac - Changes.mp4" type="video/mp4">
-                <track kind="captions" label="English" class="subtitles" srclang="en" src="video/2Pac - Changes1.vtt" default>
-            </video>
-        <div class="controls" data-state="hidden">
-            <button class="btn buttonPlayAndStop"><img src="icon/play.png" class="changeImg1">PLAY</button>
-            <button class="btn buttonSound"><img src="icon/icon_sound_disabled.png" class="changeImg2">SOUND</button>
-            <button class="btn buttonSub"><img src="icon/subtitries.png">SUBTITLE</button>
-            <button class="btn buttonFullScreen"><img src="icon/fullscreen.png">FULLSCREEN</button>
-        </div>
-        </div>
-        <div class="name-quote">
-            <h2 class="heading-2Pac">2Pac (1971-1996)</h2>
-            <p class="quote-2Pac">"Life's a wheel of fortune and it's my chance to spin it." <br/>
-            <!--("Жизнь – колесо фортуны, и это мой шанс крутануть его.")<br/>-->
-            <cite class="name-2Pac">&COPY; 2Pac</cite>
-            </p>
-        </div>
-        <div>
-            <a class="news-link" href="#news">News</a>
-        </div>
+<section id="homepage" class="section-homepage">
+    <div class="videoContent">
+        <video class="video" loop="" autoplay="" muted="" preload="auto">
+            <source src="video/2Pac - Changes.mp4" type="video/mp4">
+            <track id="subTitle" kind="captions" label="English" srclang="en" src="video/2Pac - Changes1.vtt">
+            <!--<track kind="subtitles" label="Russian" srclang="ru" src="video/2Pac - Changes (Russian).vtt" >-->
+        </video>
+    <div class="controls" data-state="hidden">
+        <button class="btn buttonPlayAndStop"><img src="icon/play.png" class="changeImg1">
+            <span class="changeText1">PLAY</span>
+        </button>
+        <button class="btn buttonSound"><img src="icon/icon_sound_disabled.png" class="changeImg2">
+            <span class="changeText2">NO SOUND</span>
+        </button>
+        <button class="btn buttonSub"><img src="icon/subtitle_disabled.png" class="changeImg3">
+            <span class="changeText3">NO SUBTITLE</span>
+        </button>
+        <button class="btn buttonFullScreen"><img src="icon/fullscreen.png">FULLSCREEN</button>
     </div>
+    </div>
+    <div class="name-quote">
+        <h2 class="heading-2Pac">2Pac (1971-1996)</h2>
+        <p class="quote-2Pac">"Life's a wheel of fortune and it's my chance to spin it." <br/>
+        <!--("Жизнь – колесо фортуны, и это мой шанс крутануть его.")<br/>-->
+        <cite class="name-2Pac">&COPY; 2Pac</cite>
+        </p>
+    </div>
+    <div>
+        <a class="news-link" href="#news">News</a>
+    </div>
+    
 </section>
 <!--SECTION NEWS-->
 <section id="news" class="section-news-feed">
@@ -157,6 +163,7 @@
 </footer>
 <!--SCRIPTS-->
     <script src="js/appVideohome..js"></script>
+    <script src="js/appScale.js"></script>
     
     <!-- Библиотека jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

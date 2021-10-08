@@ -4,9 +4,12 @@
   box-sizing: border-box;
   }
 /****************Главное тело*******************/
-body {    
+html {
 width: 100%;
 height: 100%;
+}
+body { 
+width: 100%;   
 max-width: 1920px;
 max-height: 1080px;
 font-size: 14px;
@@ -22,22 +25,23 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
 min-height: 100vh;
-display: flex;
-flex-direction: column;
+display: grid;
+grid-template-rows: 1fr auto;
+overflow: auto;
 }
 /*******************Топ=хедер*******************/
 .header-site {
 height: 8vh;
 display: flex;
-flex-wrap: wrap;
 flex-direction: row;
 justify-content: start;
-display: 1 1 auto;
-position: fixed; /***************ПРижатие к верх вне зависимости от скролла****************/
-top:0;
 width: 100%;
 background-color: rgba(112, 98, 98, 0.3);
+position:sticky;
+top:0;
+z-index: 1;
 }
+
 /********************Меню(хедер)*****************************/
 .navigation .menu {
 display: flex;
@@ -160,19 +164,16 @@ margin: 5px;
 border: 0 none;
 }
 /******************Общая страница***************************/
-.section-homepage {
-flex: 1 0 auto;
-display: flex;
-flex-direction: column;
+main {
 padding:0;
 margin: 0;
-height: 87vh;
+display: grid;
+
 }
- /******************Главная страница***************************/
-#homepage {
-margin: 0;
-padding: 0;
+.section-homepage {
+min-height: 100vh;
 }
+
  /******************Главная страница***************************/
 .name-quote {
 font-size: 35px;
@@ -228,7 +229,7 @@ padding-top: 10px;
   color:white;
 }
 /**********************Новостной контент***********************/
-/*.news-link {
+.news-link {
 color:white;
 text-decoration:none;
 font-weight: 700px;
@@ -241,16 +242,17 @@ top: 800px;
   background: rgba(112, 98, 98, 0.3);
   width: 1600px;
   margin:0 auto;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
 .heading-news {
   background-color: darkblue;
   width: 100px;
   text-align: center;
-} */
+} 
  /******************Боттом-футер***************************/
 .footer-site {
+grid-row-start: 2;
+grid-row-end: 3;
 height: 5vh;
 background-color:gray;
 color:white;   
@@ -259,7 +261,8 @@ font-size: 20px;
 width: 100%; 
 display: flex;
 justify-content: center;
-flex: 0 0 auto;
+position: fixed;
+bottom: 0;
 } 
 
 
