@@ -11,7 +11,7 @@ height: 100%;
 body { 
 width: 100%;   
 max-width: 1920px;
-max-height: 1080px;
+
 font-size: 14px;
 font-family: cursive, sans-serif;
 line-height: 25px;
@@ -31,15 +31,15 @@ overflow: auto;
 }
 /*******************Топ=хедер*******************/
 .header-site {
-height: 8vh;
+height: 70px;
 display: flex;
 flex-direction: row;
 justify-content: start;
 width: 100%;
-background-color: rgba(112, 98, 98, 0.3);
+background-color: rgba(0, 0, 0, 0.7);
 position:sticky;
 top:0;
-z-index: 1;
+z-index: 3;
 }
 
 /********************Меню(хедер)*****************************/
@@ -60,13 +60,15 @@ height: 50px;
 /******************Меню-лист(хэдер)***************************/
 .navigation .menu > .menu-list {
   position: relative;
+  
 }
 /******************Лого в меню(хэдер)***************************/
 .logo img {
 margin: 8px 10px;
 border-radius: 35%;
 /*background-image: url(img/logo_2Pac.jpg);*/
-}
+} 
+
 /******************Меню-ссылки(хэдер)***************************/
 .menu-link {
 color:white;
@@ -76,6 +78,7 @@ padding: 15px 5px;
 margin: 5px 5px;
 text-decoration:none;
 max-width: 120px;
+
 }
 /******************Меню-лист (наведение)(хэдер)***************************/
 .menu-link:hover {
@@ -84,7 +87,9 @@ border-radius: 20px 5px;
 border: 1px solid black;
 color: black;
 transition: .5s ease-in-out;
+
 }
+
 /******************Меню-лист (выпадающий список)(хэдер)***************************/
 .menu .sub-menu {
 display: none;
@@ -94,6 +99,7 @@ padding:0;
 width: auto;
 background-color: dimgray;
 list-style: none;
+
 }
 /******************Меню-лист (выпадающий список)(хэдер)***************************/
 .menu .sub-menu .menu-link {
@@ -172,6 +178,7 @@ display: grid;
 }
 .section-homepage {
 min-height: 100vh;
+
 }
 
  /******************Главная страница***************************/
@@ -228,6 +235,9 @@ padding-top: 10px;
   padding: 10px 0;
   color:white;
 }
+.btn:hover {
+  color: rgba(187, 0, 0, 0.808);
+}
 /**********************Новостной контент***********************/
 .news-link {
 color:white;
@@ -242,18 +252,76 @@ top: 800px;
   background: rgba(112, 98, 98, 0.3);
   width: 1600px;
   margin:0 auto;
-  min-height: 100vh;
+  margin-bottom:70px;
+  
 }
-.heading-news {
-  background-color: darkblue;
-  width: 100px;
-  text-align: center;
-} 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding: 30px 30px;
+}
+.grid-item {
+box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+transition: box-shadow .3s;
+height: 700px;
+background-color: rgb(44, 41, 41);
+}
+.grid-item .image {
+    height: 300px;
+    overflow: hidden;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.grid-item .image img  {
+    transition: transform 280ms ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+.grid-item:hover .image img  {
+    transform: scale(1.1);
+}
+.info h2 {
+  font-size: 30px;
+    color: #0b487e;
+    font-family: Verdana, sans-serif; 
+    margin: 0;
+    padding: 10px 10px;
+    text-align: center;
+}
+.infoText {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Verdana, sans-serif; 
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: white;
+    text-align: justify;
+}
+/* Кнопка подробнее */
+.buttonNews {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 17px;
+  display: inline-flex;
+  position: relative;
+  line-height: 20px;
+  padding: 5px 5px;
+  background: rgba(112, 98, 98, 0.3);
+  cursor: pointer; 
+  border: 2px solid #0b0c0c;
+  float: right;
+}
+
  /******************Боттом-футер***************************/
 .footer-site {
 grid-row-start: 2;
 grid-row-end: 3;
-height: 5vh;
+height: 50px;
 background-color:gray;
 color:white;   
 text-align: center;
@@ -263,6 +331,7 @@ display: flex;
 justify-content: center;
 position: fixed;
 bottom: 0;
+
 } 
 
 
